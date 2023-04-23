@@ -1,0 +1,12 @@
+projeto/
+├── docker-compose.yml
+├── Dockerfile
+├── requirements.txt
+├── app/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── static/
+├── templates/
+└── manage.py
