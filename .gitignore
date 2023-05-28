@@ -2,3 +2,6 @@
 
 # Ignorar o diretório db_data
 db_data/
+
+# Ignorar o arquivo db.sqlite3
+db.sqlite3
