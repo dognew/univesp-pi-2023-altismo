@@ -1,31 +1,18 @@
-version: '3'
-
+version: '3.3'
 services:
-  db:
-    image: mysql:5.7
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: mydatabase
-      MYSQL_USER: myuser
-      MYSQL_PASSWORD: mypassword
-    ports:
-      - "3306:3306"
-    volumes:
-      - db-data:/var/lib/mysql
-
   web:
-    build: .
-    command: >
-      sh -c "python manage.py migrate &&
-             python manage.py runserver 0.0.0.0:8000"
-    volumes:
-      - .:/app
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "8000:8000"
-    depends_on:
-      - db
-
-volumes:
-  db-data:
-
+      - 3306:3306
+      - 8000:8000
+    volumes:
+      - $PWD:/app
+    environment:
+      - MYSQL_ROOT_PASSWORD=root123
+      - MYSQL_DATABASE=projectdb
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user123
+      - TZ=America/Sao_Paulo
+      - DEBIAN_FRONTEND=noninteractive
