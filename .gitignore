@@ -1,1 +1,4 @@
+# Arquivo .gitignore
+
+# Ignorar o diretório db_data
 db_data/
