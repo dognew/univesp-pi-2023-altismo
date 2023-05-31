@@ -26,7 +26,6 @@ django-fontawesome-5==1.0.18
 django-stdimage==6.0.1
 duplicity==0.8.21
 fasteners==0.14.1
-fontawesomefree==6.4.0
 future==0.18.2
 gyp==0.1
 html5lib==1.1
