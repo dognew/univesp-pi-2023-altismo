@@ -38,9 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 'apps',   criados com o comando python manage.py startapp app-name
-    #'bootstrap4',
+    'bootstrap4',
+    'fontawesome_5',
+    'fontawesomefree',
     #'PyMySQL',
-    #'pagehtml',
+    'pagehtml',
 ]
 
 MIDDLEWARE = [
@@ -79,12 +81,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db',
-        'USER': 'user',
-        'PASSWORD': 'user123',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'db',
+        #'USER': 'user',
+        #'PASSWORD': 'user123',
+        #'HOST': '0.0.0.0',
+        #'PORT': '3306',
     }
 }
 
