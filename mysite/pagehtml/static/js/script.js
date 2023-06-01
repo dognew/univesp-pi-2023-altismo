@@ -93,7 +93,9 @@ $(document).ready(function () {
         // Adiciona mais um espaço para mensagem
         $('#chatConversation div:first').clone().appendTo("#chatConversation");
         $('#chatConversation div:last').addClass('chat-ballon');
-        $('#chatConversation').scrollTop($('#chatConversation').prop('scrollHeight'));
+        if($('#chatScrollAuto').prop('checked')){
+            $('#chatConversation').scrollTop($('#chatConversation').prop('scrollHeight'));
+        }
     }
 
     function addMsgInChatBallon(mensagem, usuario) {
