@@ -1,14 +1,17 @@
 {% load bootstrap4 %} {% load fontawesome_5 %} {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="{% static 'images/favicon-univesp.png' %}" type="image/png" />
-  <title>{{ projectName }}</title>
-  {% bootstrap_css %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="{% static 'images/favicon-univesp.png' %}"
+      type="image/png"
+    />
+    <title>{{ projectName }}</title>
+    {% bootstrap_css %}
     <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
     <link
       href="{% static 'fontawesomefree/css/fontawesome.css' %}"
@@ -268,8 +271,11 @@
       <p class="card-text">
         Caso queira conhecer o repositório do projeto, acesse:
       </p>
-      <a href="https://github.com/dognew/univesp-pi-2023-autismo" class="btn btn-primary"><i
-          class="fa-brands fa-github-square"></i> Projeto no GitHub</a>
+      <a
+        href="https://github.com/dognew/univesp-pi-2023-autismo"
+        class="btn btn-primary"
+        ><i class="fa-brands fa-github-square"></i> Projeto no GitHub</a
+      >
     </div>
     <div class="card-footer text-muted">
       Equipe Projeto Integrador - Eixo Computação 2021 – Polo Caraguatatuba
