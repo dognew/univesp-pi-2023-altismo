@@ -1,0 +1,279 @@
+{% load bootstrap4 %} {% load fontawesome_5 %} {% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="{% static 'images/favicon-univesp.png' %}"
+      type="image/png"
+    />
+    <title>{{ projectName }}</title>
+    {% bootstrap_css %}
+    <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <style>
+      body {
+        background-color: white;
+      }
+
+      #bot-chat {
+        background-color: blueviolet;
+        height: 80vh;
+        border: thin ridge rgb(2, 2, 45);
+        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .chat-title {
+        background-color: blue;
+      }
+
+      .chat {
+        background-color: cornflowerblue;
+      }
+
+      .chat-ballon {
+        min-height: 30px;
+        background-image: url("{% static 'images/mae-chat.png' %}");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+      }
+
+      .chat-baloon:nth-child(even) {
+        background-position: left;
+        padding-left: 30px;
+      }
+
+      .chat-baloon:nth-child(odd) {
+        background-position: right;
+        padding-right: 30px;
+      }
+
+      .chat-baloon p {
+        margin-left: 30px;
+        display: block;
+        min-height: 30px;
+        line-height: 30px;
+        background-color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 6px;
+      }
+
+      .chat-msg {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #8fbaff">
+      <a class="navbar-brand" href="#">Universo Atípico</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dia a Dia</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Artigos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">O que é TEA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Quem somos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-4 col-sm-12" style="text-align: center;">
+         
+          <p>&nbsp;</p>
+          
+          <img 
+            src="{% static 'images/Alt_MTrab.png' %}"
+            alt="Generic placeholder image"
+            title="Criança Autista"
+          />
+        </div>
+        <div class="col-md-8 col-sm-12 pr-5 pl-5 text-justify">
+         
+          
+          <p>&nbsp;</p>
+          <h3 class="mt-0">Autismo no mercado de trabalho: desafios e oportunidades</h3>
+          
+          <h6 class="mt-0">
+            Postado por Autismo em Dia em 06/mar/2020
+          </h6>
+          <p> &nbsp;</p>
+          Nunca se falou tanto sobre inclusão no ambiente corporativo, e naturalmente o assunto também se estende para a discussão sobre neurodiversidade. Há alguns anos, falar sobre autismo no mercado de trabalho ainda poderia ser encarado como um tabu. Já que a falta de informação e também o preconceito poderiam levar os empregadores a acreditar que um autista não tem a mesma capacidade de realizar tarefas sob pressão, ou então, que seria impossível para eles criar relacionamentos favoráveis às atividades das empresas.
+        </p>
+
+Mas, assim como a tecnologia evoluiu, as formas de organização dentro das corporações fizeram surgir novas possibilidades. Hoje, ter uma carreira sendo autista já é uma realidade, e muitas empresas vêm se conscientizando para incentivar e absorver o melhor que esses profissionais podem oferecer.
+</p>
+
+A inclusão de autistas no mercado de trabalho é garantida pela mesma lei que determina a participação mínima para portadores de qualquer deficiência. Foi a Lei 12.764, de 2012 – também conhecida como Lei Berenice Piana – que abriu as portas para o reconhecimento do autismo como uma deficiência. Desde então, o autismo tem sido muito mais discutido e diagnosticado no país.
+</p>
+
+No entanto, apesar de uma previsão otimista para os próximos anos, dados do IBGE mostram que 85% dos autistas brasileiros estão fora do mercado de trabalho. Isso pode acontecer devido à ideia de imprevisibilidade associada a essas pessoas. Muitos empregadores não sabem o que esperar em termos de resultados e comportamentos. No entanto, se faltam oportunidades, certamente sobra potencial.
+</p>
+
+A visão de um autista como um ser "exótico", que não se encaixa nos padrões vigentes, explica a lacuna da participação desses profissionais nas empresas, conforme afirma Liliane Rocha, autora do livro "Como ser um líder inclusivo" e consultora de sustentabilidade e diversidade. Ela ressalta que a inclusão de profissionais com autismo no mercado de trabalho é capaz de gerar resultados tão bons quanto os esperados dos demais colaboradores.
+</p>
+
+Para garantir uma inclusão adequada, é importante que o espaço de trabalho seja adaptado para minimizar as dificuldades naturais da condição autista. Os líderes devem preparar suas equipes para receberem novos profissionais autistas, disseminando informações úteis sobre o Transtorno do Espectro Autista (TEA) e incentivando o respeito às possíveis situações de isolamento e dificuldade de expressão.
+</p>
+
+Uma estratégia eficaz é atribuir aos autistas tarefas que demandem alta concentração e que se baseiem em suas melhores habilidades. Algumas aptidões comuns entre pessoas com TEA incluem lidar com questões lógicas e matemáticas, habilidades visuais, disposição para atividades repetitivas e metódicas, trabalhos que envolvam regras e conceitos bem definidos, e habilidade de lembrar fatos a longo prazo.
+</p>
+
+Uma iniciativa que vem fazendo a diferença
+À frente desse contexto de inovação, está a ONG Specialisterne, de origem dinamarquesa e há 3 anos com uma filial no Brasil. A ONG prepara jovens autistas de grau leve, ou seja, aqueles de alta funcionalidade, para atuar no mercado de trabalho. O autista passa por um período de preparação, onde suas melhores habilidades são identificadas e preparadas para preencherem uma possível vaga.
+</p>
+
+Assim que surge uma oportunidade em uma das várias empresas parceiras do projeto, a Specialisterne indica o profissional autista. A empresa passa a olhar não para os problemas relacionados à condição do candidato, mas para as habilidades reais que vão agregar ao trabalho. ³
+</p>
+
+Apesar de a ONG não garantir, necessariamente, uma vaga de emprego, a iniciativa se mostra muito importante para desmistificar o autismo no mercado de trabalho, pois já conseguiu empregar, aproximadamente, 93% dos seus alunos.
+</p>
+
+Ruth Rodrigues, uma das tutoras de formação da Specialisterne, explica que o trabalho não termina quando a empresa decide contratar um autista. Ela explica que a ONG faz um trabalho contínuo dentro das empresas para que, a partir do momento em que o profissional começa a exercer o trabalho designado, as expectativas sociais em volta sejam melhoradas. 
+</p>
+
+Ruth comentou, em uma entrevista ao canal Futura, que a ONG vai à empresa semanalmente tirar as dúvidas dos demais funcionários sobre a convivência e adaptação da pessoa autista. A tutora comenta, ainda, que o perfil das empresas que contratam através da ONG é de marcas muito mais ligadas à tecnologia da informação.
+</p>
+
+
+<h5>
+Porque o setor de tecnologia contrata mais?
+</h5>
+
+<p>
+Quando se trata de empresas no ramo da tecnologia, a quantidade de contratação tem ido muito além das cotas. Isso se deve, em grande parte, às características mais comuns quando se trata da formação profissional de um autista. Ou seja, como citado anteriormente, os autistas possuem características lógicas, matemáticas e artísticas com grande desenvoltura, e é justamente de pessoas assim que esse mercado necessita.
+</p>
+
+<p>
+Uma dessas empresas, a SAP, multinacional que desenvolve softwares, possui um programa de contratação chamado de Autism at Work (autistas no trabalho). Nesse programa, além de contratação de autistas para áreas específicas, também são feitos eventos educativos para orientar os demais funcionários.</p>
+
+<p>
+Essa iniciativa, que propõe que o quadro da empresa com autistas seja de 1% (de um total de mais de 77 mil funcionários no mundo todo), tem feito a diferença. Para Márcia Machado, a primeira contratada pelo programa da SAP no Brasil, foi uma experiência agregadora começar a trabalhar num local onde as pessoas já sabiam sobre o autismo. Ela contou ao portal Canal Tech que uma de suas dificuldades eram as luzes dos escritórios. Mas Márcia passou a trabalhar de óculos escuros e a atitude foi aceita com naturalidade pela equipe.</p>
+
+<p>
+Benefícios da contratação de um autista
+Além da desenvoltura de trabalhos metódicos, ficou claro para essas empresas que, por não seguir padrões comportamentais, os profissionais autistas podem acabar pensando “fora da caixa”, para diversas situações. Ou seja, contratar um autista pode se transformar numa ferramenta de inovação. </p>
+
+<p>
+Através da parceria com a Specialisterne, o banco Itaú, uma das empresas que vem aderindo à contratação de autistas, já tem grandes conquistas associadas a essa atitude. Em 2018, numa reportagem do jornal Estadão, a empresa contou como o jovem Eryk Nakamura, a partir da alteração de um tipo de código, fez um procedimento diminuir o tempo de processamento de 48 horas para apenas 7 horas. Essa conquista gerou resultados reais e mais agilidade para as operações do Itaú. </p>
+
+<h4>
+Autistas nas universidades
+</h4>
+<p>
+Não há como falar de mercado de trabalho sem falar de educação. Afinal, para entrar num mercado extremamente competitivo, ainda é preciso que a pessoa autista tenha oportunidade nas universidades, cursos técnicos e outros modos de aperfeiçoamento profissional.
+</p>
+<p>
+No Brasil, não há lei que garanta cotas para pessoas com deficiência para ingresso nas universidades, apenas para concursos públicos. Para uma pessoa autista conseguir uma vaga, ela deverá passar pelo mesmo processo de ampla concorrência.
+</p>
+<p>
+O Censo da Educação Superior de 2019 contabilizou pouco mais de 1.500 autistas matriculados nas universidades, número que talvez seja ainda maior na prática, se considerarmos que muitas pessoas não declaram o transtorno perante a faculdade. O que, aliás, é uma das grandes dificuldades enfrentadas para criar estatísticas que ajudem a melhorar o trabalho das instituições nesse sentido </p>
+
+<p>
+Entretanto, algumas universidades também vem se adaptando a essa realidade. É o caso da Universidade Federal de Santa Catarina, que instituiu, em 2013, o Núcleo de Acessibilidade Educacional. O núcleo é focado em 3 pilares: formação de professores para se adaptar às diferenças de cada aluno; formação de um currículo flexível, com adaptações e criação de novas metodologias de ensino; e estímulo ao convívio social e à integração.</p>
+
+<p>
+No Rio Grande do Sul, a UFRGS acompanha os alunos com deficiência pelo programa INCLUIR, o Núcleo de Inclusão e Acessibilidade. Nele, a universidade promove rodas de debate, eventos de capacitação e assistência estudantil. A psicóloga Camila Menezes Ferreira Guerreiro, uma das responsáveis pelo núcleo, contou à Revista Autismo que a faculdade entende que é o ambiente que deve se adaptar a essas pessoas, e não ao contrário. </p>
+
+<h4>
+Autismo no mercado de trabalho: as dificuldades sociais
+</h4>
+<p>
+A fórmula parece certeira: grandes empresas tomam consciência social, preparam o espaço e contratam cada vez mais pessoas com TEA. Mas a realidade pode ser muito  mais difícil para autistas que vivem fora dos grandes centros – onde, geralmente, estão as maiores corporações – ou que vivem em situação de baixa renda.
+</p>
+Nesse último caso, há ainda mais precariedade em relação ao diagnóstico. Para contratação de autistas, as empresas geralmente exigem um diagnóstico formal. Mas para chegar ao enquadramento clínico, são necessárias diversas análises que vão desde avaliações de psicólogos, neurologistas, fonoaudiólogos, entre outros.
+<p>
+Uma família pobre, que depende apenas do SUS, pode acabar desestimulada a continuar tratamentos essenciais, devido, principalmente, à demora de liberação de vagas no sistema público.</p>
+
+<p>
+Quando o tratamento começa e é continuado desde cedo, a criança tem mais chances de que seu desenvolvimento permita, mais tarde, uma melhor adaptação em escolas, universidades e, consequentemente, a entrada no mercado de trabalho.</p>
+
+<p>
+Infelizmente, no Brasil os problemas de educação são estruturais e estão longe da perfeição mesmo no ensino regular. Quanto mais no que diz respeito ao ensino de crianças e jovens no transtorno do espectro autista. É muito provável que um autista de uma região pobre, fora dos grandes centros, não tenha as mesmas oportunidades que um de família com boas condições que viva em cidades onde há muito mais fatores de favorecimento.</p>
+
+
+<h4>
+Autismo no mercado de trabalho: um desafio para os próximos anos
+</h4>
+<p>
+Empresas de pequeno porte podem até desejar, mas dificilmente terão vagas e oportunidade de adaptações e períodos de testes para os autistas. E o problema fica ainda mais complicado quando mais de 90% dos estabelecimentos no Brasil são empresas de pequeno porte.11
+</p>
+<p>
+O desafio para os próximos anos é a construção de uma sociedade que saiba equilibrar o suporte social às pessoas com autismo com oportunidades que melhorem a expectativa de vida dessas pessoas. A longo prazo, é preciso que a estrutura seja plenamente estabelecida desde o ensino básico, até chegar, de fato, ao mercado de trabalho e, após isso, em sistemas que permitam uma aposentadoria com qualidade.
+</p>
+        </div>
+      </div>
+    </div>      
+         
+    <footer class="card mt-5 text-center">
+      <div class="card-body">
+        <h5 class="card-title">Para mais informações sobre o projeto</h5>
+        <p class="card-text">
+          Agradecemos toda a forma de feedback da nossa plataforma, e
+          esperamos estar contribuindo com todos vocês.
+        </p>
+        <p class="card-text">
+          Caso queira conhecer o repositório do projeto, acesse:
+        </p>
+        <a
+          href="https://github.com/dognew/univesp-pi-2023-autismo"
+          class="btn btn-primary"
+          ><i class="fa-brands fa-github-square"></i> Projeto no GitHub</a
+        >
+      </div>
+      <div class="card-footer text-muted">
+        Equipe Projeto Integrador - Eixo Computação 2021 – Polo Caraguatatuba
+      </div>
+    </footer>
+    
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% bootstrap_javascript %}
+  </body>
+</html>

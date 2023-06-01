@@ -1,0 +1,234 @@
+{% load bootstrap4 %} {% load fontawesome_5 %} {% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="{% static 'images/favicon-univesp.png' %}"
+      type="image/png"
+    />
+    <title>{{ projectName }}</title>
+    {% bootstrap_css %}
+    <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <style>
+      body {
+        background-color: white;
+      }
+
+      #bot-chat {
+        background-color: blueviolet;
+        height: 80vh;
+        border: thin ridge rgb(2, 2, 45);
+        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .chat-title {
+        background-color: blue;
+      }
+
+      .chat {
+        background-color: cornflowerblue;
+      }
+
+      .chat-ballon {
+        min-height: 30px;
+        background-image: url("{% static 'images/mae-chat.png' %}");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+      }
+
+      .chat-baloon:nth-child(even) {
+        background-position: left;
+        padding-left: 30px;
+      }
+
+      .chat-baloon:nth-child(odd) {
+        background-position: right;
+        padding-right: 30px;
+      }
+
+      .chat-baloon p {
+        margin-left: 30px;
+        display: block;
+        min-height: 30px;
+        line-height: 30px;
+        background-color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 6px;
+      }
+
+      .chat-msg {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #8fbaff">
+      <a class="navbar-brand" href="#">Universo Atípico</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dia a Dia</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Artigos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">O que é TEA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Quem somos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-4 col-sm-12" style="text-align: center;">
+         
+          <p>&nbsp;</p>
+          
+          <img 
+            src="{% static 'images/PntCra01.png' %}"
+            alt="Generic placeholder image"
+            title="Criança Autista"
+          />
+        </div>
+        <div class="col-md-8 col-sm-12 pr-5 pl-5 text-justify">
+         
+          
+          <p>&nbsp;</p>
+          <h3 class="mt-0">Psicanálise no tratamento das crianças autistas</h3>
+          
+          <h6 class="mt-0">
+            Texto de Rodrigo Buoro - Terapeuta, especialista na área da psicanálise e naturologia - (11) 9.6068-9403 - www.consultorfuncional.com - Julho 2016
+          </h6>
+          <p> &nbsp;</p>
+          <p>
+            A criança, ao vir ao mundo, não está pronta e não sobrevive sozinha. Ela necessita de uma outra
+            pessoa que garanta a sua sobrevivência e a partir dessa relação, ela poderá se constituir
+            como indivíduo. A garantia da sobrevivência vem da mãe ou da pessoa que assume a função materna, juntamente com o pai ou aquele que assume a função paterna.
+          </p>
+          <p> 
+            O autismo é uma síndrome comportamental com etiologias diferentes na qual o processo de desenvolvimento infantil
+            se encontra profundamente distorcido. Podemos afirmar que o diagnóstico do autismo é delicado, haja vista, que existem umas 
+            diversidades dos sintomas apresentados, por exemplos: crianças que falam, outras que não falam, crianças com pouco ou nenhum 
+            contato social e outras com nível de desenvolvimento cognitivo não adequado para sua idade.
+          </p>
+          <p>
+            O diagnóstico não é feito por marcadores laboratoriais, ou biológicos mas deve ser realizado por um profissional qualificado para pautar as observações realizadas nas entrevistas familiares. Justamente por haver vários sintomas o autismo pode ser confundido com outras síndromes ou outros transtornos.
+          </p>
+          <p>
+            A criança no seu nascimento não está pronta para a sobrevivência, é necessário que outra pessoa garanta a sua sobrevida, geralmente os pais são responsáveis por esta função.
+          </p>
+          <p>
+            O autismo decorre de uma falha dos atos de reconhecimento mútuo entre a mãe e o bebê, que pode ser causada por vários motivos: a depressão pós-parto, problemas sociais, família... O nascimento de um filho com deficiência de desenvolvimento é uma causa de muito sofrimento para os pais, que podem dar origem a formas particulares de defesa que complicam ainda mais a relação entre pais e filhos.
+          </p>
+
+          <p>
+            A psicanálise está a serviço de ajudar pais e filhos no enfrentamento do que os faz sofrer, apontando a flecha do tratamento no sentido da constituição de um Sujeito imerso no mundo da linguagem e da relação com o outro.
+          </p>
+          <p>
+              Para isso é fundamental a participação dos pais no tratamento do filho, pois como cuidadores responsáveis trabalhar suas dificuldades, incertezas com as quais todos nós pais convivemos, sejam crianças autistas ou não, são evidentes que as dificuldades dos pais portadores de crianças com autismo são de outra ordem, por isso as consultas com psicanalistas devem ser vertentes a escuta passiva dos pais, suas queixas, suas aflições, suas dores, anseios e medos.
+          </p>
+            
+          <p>
+            Quando os pais levam suas crianças para um centro de tratamento, observa-se discursos cheios de angustia, desespero, relatos de incompreensão perante o comportamento das mesmas.
+          </p>
+          <p>
+           Suas principais dúvidas são:
+          </p>
+            
+          <ul>
+            <li>Quais os motivos de meu filho ser autista?</li>
+              
+            <li>O que fazer?</li>
+              
+            <li>Tem cura?</li>
+              
+            <li>Como ajudar?</li>
+              
+            <li>Não me sinto capaz...</li>
+          </ul>
+          <p>
+          Após o diagnóstico geralmente as crianças são encaminhadas para o tratamento recomentado que pode variar de acordo com cada abordagem e cada profissional envolvido. Vale ressaltar que o diagnóstico nem sempre é realizado facilmente é necessária muita dedicação do profissional que o atende.
+          </p> 
+            
+          <p>
+            A terapia não é um questionamento psicanalítico, os profissionais não estão preocupados em atribuir significados para o comportamento de crianças autistas, o cuidado geralmente envolve os pais, existem muitas abordagens psicanalíticas. Assim para que o psicanalista alcance seus objetivos, terá de trabalhar com o desenvolvimento das funções materna e paterna para que possa ter resultados positivos em terapia com crianças autistas.
+          </p> 
+         
+          <p>
+            Não penso que a psicanálise ofereça uma resposta ao “autismo”. A psicanálise não trata “doença”, ela oferece uma via aos sintomas subjetivos, permitindo à pessoa se confrontar com seu real, sem máscara nem concessões.
+          </p> 
+
+        </div>
+      </div>
+    </div>      
+         
+    <footer class="card mt-5 text-center">
+      <div class="card-body">
+        <h5 class="card-title">Para mais informações sobre o projeto</h5>
+        <p class="card-text">
+          Agradecemos toda a forma de feedback da nossa plataforma, e
+          esperamos estar contribuindo com todos vocês.
+        </p>
+        <p class="card-text">
+          Caso queira conhecer o repositório do projeto, acesse:
+        </p>
+        <a
+          href="https://github.com/dognew/univesp-pi-2023-autismo"
+          class="btn btn-primary"
+          ><i class="fa-brands fa-github-square"></i> Projeto no GitHub</a
+        >
+      </div>
+      <div class="card-footer text-muted">
+        Equipe Projeto Integrador - Eixo Computação 2021 – Polo Caraguatatuba
+      </div>
+    </footer>
+    
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% bootstrap_javascript %}
+  </body>
+</html>
