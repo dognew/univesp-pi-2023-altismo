@@ -1,0 +1,557 @@
+{% load bootstrap4 %} {% load fontawesome_5 %} {% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="{% static 'images/favicon-univesp.png' %}"
+      type="image/png"
+    />
+    <title>{{ projectName }}</title>
+    {% bootstrap_css %}
+    <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <style>
+      body {
+        background-color: white;
+      }
+
+      #bot-chat {
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          180deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 35%,
+          rgba(0, 212, 255, 1) 100%
+        );
+        border: thin ridge rgb(2, 2, 45);
+        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .chat-title {
+        max-height: 20vh;
+        color: white;
+      }
+
+      #chatConversation {
+        overflow-y: scroll;
+        padding-bottom: 150px;
+        height: 60vh;
+        max-height: 60vh;
+      }
+
+      .chat-ballon {
+        min-height: 30px;
+      }
+
+      .chat-ballon:nth-child(even) {
+        border-radius: 24px 24px 24px 0px;
+      }
+
+      .chat-ballon:nth-child(odd) {
+        border-radius: 24px 24px 0px 24px;
+      }
+
+      .chat-ballon p,
+      .chat-ballon-bot p,
+      .chat-ballon-psicologo p {
+        display: block;
+        font-size: 0.8rem;
+        min-height: 30px;
+        line-height: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-size: 20% auto;
+      }
+
+      .chat-ballon:nth-child(even) {
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgb(2, 89, 184) 22%,
+          rgb(255, 255, 255) 27%,
+          rgb(255, 255, 255) 100%
+        );
+      }
+
+      .chat-ballon:nth-child(odd) {
+        background: linear-gradient(
+          -90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgb(2, 89, 184) 22%,
+          rgb(255, 255, 255) 27%,
+          rgb(255, 255, 255) 100%
+        );
+      }
+
+      .chat-ballon:nth-child(even) p {
+        background-position: left;
+        padding-left: 30%;
+        padding-right: 10px;
+        background-image: url("{% static 'images/mae-chat-left.png' %}");
+        background-repeat: no-repeat;
+      }
+
+      .chat-ballon:nth-child(odd) p {
+        background-position: right;
+        padding-right: 30%;
+        padding-left: 10px;
+        background-image: url("{% static 'images/mae-chat-right.png' %}");
+        background-repeat: no-repeat;
+      }
+
+      .chat-ballon-bot p {
+        background-image: url("{% static 'images/bot.png' %}") !important;
+        background-repeat: no-repeat !important;
+      }
+
+      .chat-ballon-psicologo p {
+        background-image: url("{% static 'images/psicologo-chat.png' %}") !important;
+        background-repeat: no-repeat !important;
+      }
+
+      .chat-ballon-bot:nth-child(odd) p,
+      .chat-ballon-psicologo:nth-child(odd) p {
+        background-position: right;
+        padding-right: 30%;
+        padding-left: 10px;
+      }
+
+      .chat-ballon-bot:nth-child(even) p,
+      .chat-ballon-psicologo:nth-child(even) p {
+        background-position: left;
+        padding-left: 30%;
+        padding-right: 10px;
+      }
+    </style>
+    <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <script src="{% static 'fontawesomefree/js/fontawesome.js' %}"></script>
+    <script src="{% static 'fontawesomefree/js/solid.js' %}"></script>
+    <script src="{% static 'fontawesomefree/js/brands.js' %}"></script>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #8fbaff"
+    >
+      <a class="navbar-brand" href="#">Universo Atípico</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse justify-content-center navbar-collapse"
+        id="navbarNavDropdown"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dia a Dia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Artigos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">O que é TEA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Quem somos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+          <div class="row mt-5 mb-5">
+            <div class="media">
+              <img
+                class="align-self-center mr-3"
+                src="{% static 'images/logo-site.png' %}"
+                alt="Generic placeholder image"
+              />
+              <div class="media-body pr-3">
+                <h5 class="mt-0 mb-5 text-center">
+                  Bem-vindo a plataforma Universo Atípico
+                </h5>
+                <p class="m-3 text-justify">
+                  Esta plataforma consiste em um projeto de faculdade de alunos
+                  da Universidade Virtual do Estado de São Paulo, onde nosso
+                  objetivo é auxiliar a comunidade que consiste em pais e
+                  familiares de pessoas autistas ou com outros transtornos
+                  infantis com informações, artigos, e um ambiente virtual onde
+                  possam trocar informações através de um chat inteligente que
+                  contará com um bot que poderá sugerir artigos relacionados as
+                  dúvidas apresentadas na conversa.
+                </p>
+                <div class="row"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3 justify-content-center mt-5 mb-5">
+            <h1 class="display-4 text-center">Artigos</h1>
+          </div>
+          <div class="d-flex justify-content-center mt-5 mb-5">
+            <div class="card-deck">
+              <div class="card" style="width: 15rem">
+                <img
+                  class="card-img-top"
+                  src="{% static 'images/adolescente-headset.jpg' %}"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="http://127.0.0.1:8000/autismo-na-infancia"
+                      >Psicanálise no tratamento das crianças autistas</a
+                    >
+                  </h5>
+                  <p class="card-text text-justify">
+                    A criança, ao vir ao mundo, não está pronta e não sobrevive
+                    sozinha. Ela necessita de uma outra pessoa que garanta a sua
+                    sobrevivência e a partir dessa relação(...)
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <a
+                    href="http://127.0.0.1:8000/autismo-na-infancia"
+                    class="btn btn-primary w-100"
+                    >Leia...</a
+                  >
+                </div>
+              </div>
+              <div class="card" style="width: 15rem">
+                <img
+                  class="card-img-top"
+                  src="{% static 'images/homem-trabalhando.jpg' %}"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a
+                      href="http://127.0.0.1:8000/autismo-no-mercado-de-trabalho"
+                      >Autismo no mercado de trabalho: desafios e
+                      oportunidades</a
+                    >
+                  </h5>
+                  <p class="card-text text-justify">
+                    Nunca se falou tanto sobre inclusão no ambiente corporativo,
+                    e naturalmente o assunto também se estende para a discussão
+                    sobre neurodiversidade.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <a
+                    href="http://127.0.0.1:8000/autismo-no-mercado-de-trabalho"
+                    class="btn btn-primary w-100"
+                    >Leia...</a
+                  >
+                </div>
+              </div>
+              <div class="card" style="width: 15rem">
+                <img
+                  class="card-img-top"
+                  src="{% static 'images/autismo-infantil.jpg' %}"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a
+                      href="http://127.0.0.1:8000/sintomas-do-autismo-na-infancia"
+                      >Sintomas do Autismo na infância do 1 aos 5 anos de
+                      vida</a
+                    >
+                  </h5>
+                  <p class="card-text text-justify">
+                    Muitas crianças com Transtorno do Espectro Autista (TEA)
+                    apresentam sintomas quando ainda são muito pequenas,
+                    especialmente dificuldades nas interações sociais e na
+                    linguagem.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <a
+                    href="http://127.0.0.1:8000/sintomas-do-autismo-na-infancia"
+                    class="btn btn-primary w-100"
+                    >Leia...</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center mt-5 mb-5">
+            <div class="card-deck">
+              <div class="card" style="width: 15rem">
+                <img
+                  class="card-img-top"
+                  src="{% static 'images/adolescente-headset.jpg' %}"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="http://127.0.0.1:8000/autismo-na-adolescencia"
+                      >Como lidar com autismo na adolescência</a
+                    >
+                  </h5>
+                  <p class="card-text text-justify">
+                    Autismo na adolescência é um tema que gera bastante
+                    preocupação nos pais e pessoas cuidadoras. Isso porque,
+                    quando pensamos no TEA, muitas vezes falamos de crianças e
+                    ações feitas para os pequenos.
+                  </p>
+                </div>
+                <div class="card-footer text-justify">
+                  <a
+                    href="http://127.0.0.1:8000/autismo-na-adolescencia"
+                    class="btn btn-primary w-100"
+                    >Leia...</a
+                  >
+                </div>
+              </div>
+              <div class="card" style="width: 15rem">
+                <img
+                  class="card-img-top"
+                  src="{% static 'images/homem-trabalhando.jpg' %}"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="http://127.0.0.1:8000/direitos-dos-autistas"
+                      >Autismo no mercado de trabalho: desafios e
+                      oportunidades</a
+                    >
+                  </h5>
+                  <p class="card-text text-justify">
+                    O transtorno do espectro autista (TEA) é considerado uma
+                    deficiência do ponto de vista legal. Por essa razão, as leis
+                    que protegem os direitos das pessoas com deficiência também
+                    se aplicam às pessoas autistas.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a
+                    href="http://127.0.0.1:8000/direitos-dos-autistas"
+                    class="btn btn-primary w-100"
+                    >Leia...</a
+                  >
+                </div>
+              </div>
+              <div class="card" style="width: 15rem">
+                <img
+                  class="card-img-top"
+                  src="{% static 'images/autismo-infantil.jpg' %}"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="http://127.0.0.1:8000/escalas-de-avaliacao"
+                      >ESCALAS DE AVALIAÇÃO
+                    </a>
+                  </h5>
+                  <p class="card-text text-justify">
+                    Quando se avalia pessoas suspeitas de Transtorno do Espectro
+                    do Autismo (TEA), é importante ter uma abordagem ampla e
+                    multiprofissional. O TEA afeta diversas áreas (...)
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <a
+                    href="http://127.0.0.1:8000/escalas-de-avaliacao"
+                    class="btn btn-primary w-100"
+                    >Leia...</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 bg-primary">
+          <div class="position-relative right-0">
+            <div id="bot-chat" class="container position-absolute bottom-0">
+              <div class="d-flex flex-column vh-100">
+                <div class="order-1 chat-title pt-3 mb-3" style="height: 150px">
+                  <div class="media">
+                    <img
+                      src="{% static 'images/bot.png' %}"
+                      class="w-25 mr-3"
+                      alt="ChatBot Universo"
+                    />
+                    <div class="media-body">
+                      <h5 class="mt-3 text-center">ChatBot Universo</h5>
+                      <p>Usuários online: <span id="usersonline">0</span></p>
+                      <p>Mensagens: <span id="qdeMsg">0</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-2 flex-grow-1 chat">
+                  <div class="col-12">
+                    <div id="chatConversation" class="container-fluid">
+                      <div class="">
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-3 pt-2" style="height: 150px">
+                  <div class="input-group">
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="chatScrollAuto"
+                        checked
+                      />
+                      <label class="form-check-label" for="chatScrollAuto"
+                        >Rolagem automática</label
+                      >
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <input
+                      id="inputChatBot"
+                      type="text"
+                      class="form-control"
+                      placeholder="Escreva aqui..."
+                      aria-label="Escreva aqui..."
+                      aria-describedby="buttonChatSend"
+                    />
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline-secondary bg-dark"
+                        type="button"
+                        id="btChatSend"
+                      >
+                        Enviar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="card mt-5 text-center">
+        <div class="card-body">
+          <h5 class="card-title">Para mais informações sobre o projeto</h5>
+          <p class="card-text">
+            Agradecemos toda a forma de feedback da nossa plataforma, e
+            esperamos estar contribuindo com todos vocês.
+          </p>
+          <p class="card-text">
+            Caso queira conhecer o repositório do projeto, acesse:
+          </p>
+          <a
+            href="https://github.com/dognew/univesp-pi-2023-autismo"
+            class="btn btn-primary"
+            ><i class="fa-brands fa-github-square"></i> Projeto no GitHub</a
+          >
+        </div>
+        <div class="card-footer text-muted">
+          Equipe Projeto Integrador - Eixo Computação 2021 – Polo Caraguatatuba
+        </div>
+      </footer>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="loginBotChat"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Login BotChat - Identifique-se!
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">E-mail</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Digite seu email"
+                  />
+                  <small id="emailHelp" class="form-text text-muted"
+                    >Nunca compartilharemos seu e-mail com mais ninguém.</small
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="nomeChat">Nome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nomeChat"
+                    placeholder="Digite seu nome ou apelido"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                id="btNomeChat"
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button id="btEntrarBot" type="button" class="btn btn-primary">
+                Entrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% bootstrap_javascript %}
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

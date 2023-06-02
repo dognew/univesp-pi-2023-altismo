@@ -1,0 +1,283 @@
+{% load bootstrap4 %} {% load fontawesome_5 %} {% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="{% static 'images/favicon-univesp.png' %}"
+      type="image/png"
+    />
+    <title>{{ projectName }}</title>
+    {% bootstrap_css %}
+    <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <style>
+      body {
+        background-color: white;
+      }
+
+      #bot-chat {
+        background-color: blueviolet;
+        height: 80vh;
+        border: thin ridge rgb(2, 2, 45);
+        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .chat-title {
+        background-color: blue;
+      }
+
+      .chat {
+        background-color: cornflowerblue;
+      }
+
+      .chat-ballon {
+        min-height: 30px;
+        background-image: url("{% static 'images/mae-chat.png' %}");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+      }
+
+      .chat-baloon:nth-child(even) {
+        background-position: left;
+        padding-left: 30px;
+      }
+
+      .chat-baloon:nth-child(odd) {
+        background-position: right;
+        padding-right: 30px;
+      }
+
+      .chat-baloon p {
+        margin-left: 30px;
+        display: block;
+        min-height: 30px;
+        line-height: 30px;
+        background-color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 6px;
+      }
+
+      .chat-msg {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #8fbaff">
+      <a class="navbar-brand" href="#">Universo Atípico</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dia a Dia</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Artigos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">O que é TEA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Quem somos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-4 col-sm-12" style="text-align: center;">
+         
+          <p>&nbsp;</p>
+          
+          <img 
+            src="{% static 'images/Adolecence_Cel.jpg' %}"
+            alt="Generic placeholder image2"
+            title="Adolecente Autista"
+          />
+        </div>
+        <div class="col-md-8 col-sm-12 pr-5 pl-5 text-justify">
+         
+          
+          <p>&nbsp;</p>
+          <div class="container container--md">
+            <p>&nbsp;</p>
+            <h3 class="mt-0">Como lidar com autismo na adolescência</h3>
+            <div class="single__author">
+              <div class="single__author-photo">
+                <img alt="Foto do author Heloise Rissato" data-src="Resolucao-menor-3-128x128.jpg" class=" lazyloaded" src="https://genialcare.com.br/wp-content/uploads/2022/08/Resolucao-menor-3-128x128.jpg"><noscript><img  alt="Foto do author Heloise Rissato" data-src="https://genialcare.com.br/wp-content/uploads/2022/08/Resolucao-menor-3-128x128.jpg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://genialcare.com.br/wp-content/uploads/2022/08/Resolucao-menor-3-128x128.jpg" alt="Foto do author Heloise Rissato" /></noscript>
+              </div>
+              <div class="single__author-details">
+                <p class="single__author-name">
+                  Heloise Rissato        </p>
+                <p class="single__date">
+                  <strong>Publicado em</strong> 01 de dezembro de 2022          <span class="single__date--update"><strong>Atualizado em</strong> 18 de maio de 2023</span>
+                </p>
+                      </div>
+            </div>
+          </div>
+          
+          
+          <p> &nbsp;</p>
+          <p>Autismo na adolescência é um tema que gera bastante preocupação nos pais e pessoas cuidadoras. Isso porque, quando pensamos no TEA, muitas vezes falamos de crianças e ações feitas para os pequenos.</p>
+          <p>
+Mas, nosso foco é sempre desenvolver as crianças para que se tornem adolescentes e adultos independentes. Nesse aspecto, existem muitos desafios que a própria pessoa no espectro irá enfrentar, além da família como um todo.
+</p>
+
+<p>
+Como essa é uma fase da vida bastante complicada, os interesses mudam, o corpo passa por diversas alterações e existem muitas questões sobre socialização com o restante do mundo. Tudo pode ser muito complexo!</p>
+
+<p>
+Isso não é diferente para pessoas atípicas. Assim como indivíduos neurotípicos, os autistas terão que aprender a lidar com tudo isso, ficando cada vez menos ligados à rotina da família ou pessoas cuidadoras, descobrindo o mundo sozinhos por suas perspectivas.</p>
+
+<p>
+Apesar do diagnóstico tardio ser uma realidade mais comum em pessoas já adultas, existem alguns adolescentes que passam por isso e, de repente, precisam lidar com os sentimentos do laudo, além de todas as questões da vida que encontrarão nessa nova fase de amadurecimento.</p>
+
+<p>
+Por isso, neste texto, você vai encontrar informações e dicas sobre como lidar com o autismo na adolescência. Vale a pena ler!
+</p>
+
+<h5> Na adolescência e questões emocionais</h5>
+<p>
+A adolescência é uma fase com muitos desafios para todas as pessoas. Para pessoas autistas isso pode ser ainda mais difícil, pois todos esses desafios se tornam mais frequentes e demandam novas habilidades, que precisam ser aprendidas, em temas como:</p>
+<ul>
+  <li>Habilidades sociais;
+  <li>Sexualidade;
+  <li>Autoestima;
+  <li>Responsabilidade;
+  <li>Ansiedade.
+</ul>
+
+<p>
+Essas são apenas algumas das demandas que acontecem no dia a dia do adolescente, e que podem dificultar o entendimento do que está acontecendo a sua volta. São muitas decisões a serem tomadas, e as questões emocionais podem acabar sobrecarregando a rotina.
+</p>
+
+
+Nesse momento, podem ocorrer reações variadas e extremas ao estresse, como raivas, fugas e até mesmo agressividades. Por isso, é muito importante que a família ou pessoas cuidadoras estabeleçam uma comunicação clara e bastante participativa com o adolescente autista.
+</p>
+
+Aqui é importante que não exista uma infantilização dos interesses ou até mesmo das comunicações, criando respostas que possam parecer ser destinadas a alguém mais novo. Além disso, o autista pode precisar de ajuda para entender os sinais sociais, dificultando ainda mais a formação da identidade.
+</p>
+
+Outra questão que pode acontecer na vida do autista adolescente é a percepção de si mesmo em relação aos demais jovens, seja da escola, amigos ou outros ambientes. A pessoa no espectro pode começar a ver os colegas evoluindo e fazendo escolhas, e tendo dificuldades de se inserir de uma forma adequada nesse processo.
+</p>
+
+Por isso, além das intervenções, que não são restritas apenas a crianças com TEA, e as sessões de terapia, a família pode (e deve) estimular a descoberta das habilidades e interesses particulares da pessoa, o que ajuda na conexão de todos nesse mesmo interesse e facilita o diálogo sobre situações rotineiras.
+</p>
+
+Entender cada novo desafio, emoção e sentimento é fundamental para que muitas questões típicas dessa fase da vida não se tornem barreiras maiores no futuro.
+</p>
+
+<h5>
+Autismo na adolescência e as expectativas intelectuais
+</h5>
+
+Falamos muito de desenvolvimento de habilidades para crianças com autismo, principalmente por conta da educação escolar. O que pode gerar bastante frustração quando pensamos no autismo na adolescência, é que, geralmente, se espera muito mais em habilidades de adolescentes do que crianças.
+
+Assim, quando existe um tempo maior para alcançar qualquer expectativa, podem existir pressões internas e externas.
+
+As dificuldades de entender o ambiente podem ser barreiras intelectuais para muitos autistas na adolescência, já que é preciso compreender quais os sinais de determinada situação está passando.
+
+Uma dica é que o adolescente tenha treinos específicos baseados na análise do comportamento aplicada, conseguindo praticar algumas ações que podem acontecer.
+
+A ingenuidade também pode ser uma dificuldade de adolescentes com TEA, que independente do nível de necessidade e suporte, têm dificuldade de entender sinais do ambiente como piadas ou metáforas.
+
+É preciso que a pessoa no espectro tenha acompanhamento terapêutico correto para desenvolver habilidades de leitura social, treinando com pares noções que podem ser abordadas no seu dia a dia.
+
+Outra questão que envolve as expectativas intelectuais de jovens com TEA é a padronização de trabalhos e provas. Além disso, podem existir dificuldades pedagógicas que variam desde dificuldades de concentração, compreensão de conceitos abstratos, TDAH ou maior grau de deficiência intelectual.
+
+Por isso, é muito importante que exista uma educação inclusiva com adaptação do currículo escolar para esses alunos, considerando sempre as necessidades individuais.
+
+Banner sobre a Rede Genial de terapeutas com mulher e uma menina brincando com bolhas de sabão.
+
+Construindo uma ponte para a vida adulta
+Toda família sonha com o futuro dos filhos. Esse é um momento que pode sofrer mudanças quando existe o diagnóstico de autismo.
+
+Mas, com o passar dos anos e o ganho de habilidades da pessoa no espectro, é possível, mesmo que diferente do imaginado, enxergar um futuro repleto de independência.
+
+Existem muitas oportunidades de aprendizado para que autistas adolescentes possam construir uma ponte para uma vida adulta repleta de autonomia.
+
+Nesse aspecto, a família tem um papel fundamental de colaborar nessa construção, ajudando a aumentar as chances de sucesso ao longo da vida. O planejamento e o diálogo são ferramentas essenciais para isso.
+
+Para essa construção os pais podem ajudar da seguinte maneira:
+
+Todo mundo é capaz de aprender, por isso, ajude a monitorar a transição de interesses do adolescente ao longo da vida, viabilizando oportunidades de aprendizado a cada fase;
+Informe-se de tudo que está disponível na sua cidade e região, viabilizando a entrada do autista na sociedade;
+Se observar qualquer tipo de interesse em uma determinada área profissional, por exemplo, procure conversar sobre o que pode ser feito para aquilo acontecer, seja por meio de cursos técnicos ou universitários;
+Vá introduzindo lições sobre como é morar sozinho ou dividir a casa com outras pessoas, reforçando aspectos de responsabilidade da vida adulta;
+Sempre acompanhe de perto questões físicas e psicológicas do adolescente, conversando com especialistas que podem ajudar.
+Assim como as preocupações com a independência surgem, a sexualidade e puberdade é outro tema que fará parte da adolescência e vida adulta da pessoa com autismo.
+
+Seja na descoberta dela ou no entendimento do que é construir uma vida sexual ao longo dos anos.
+
+Lembre-se que a resposta aqui não é deixar de conversar sobre o assunto, mas sim, encontrar uma maneira de abordar que faça sentido para todo o núcleo familiar. Para ajudar, temos um conteúdo completo que explica melhor esse assunto:
+
+        </div>
+      </div>
+    </div>      
+         
+    <footer class="card mt-5 text-center">
+      <div class="card-body">
+        <h5 class="card-title">Para mais informações sobre o projeto</h5>
+        <p class="card-text">
+          Agradecemos toda a forma de feedback da nossa plataforma, e
+          esperamos estar contribuindo com todos vocês.
+        </p>
+        <p class="card-text">
+          Caso queira conhecer o repositório do projeto, acesse:
+        </p>
+        <a
+          href="https://github.com/dognew/univesp-pi-2023-autismo"
+          class="btn btn-primary"
+          ><i class="fa-brands fa-github-square"></i> Projeto no GitHub</a
+        >
+      </div>
+      <div class="card-footer text-muted">
+        Equipe Projeto Integrador - Eixo Computação 2021 – Polo Caraguatatuba
+      </div>
+    </footer>
+    
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% bootstrap_javascript %}
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

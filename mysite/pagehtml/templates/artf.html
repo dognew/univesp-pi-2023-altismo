@@ -1,0 +1,201 @@
+{% load bootstrap4 %} {% load fontawesome_5 %} {% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="{% static 'images/favicon-univesp.png' %}"
+      type="image/png"
+    />
+    <title>{{ projectName }}</title>
+    {% bootstrap_css %}
+    <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <style>
+      body {
+        background-color: white;
+      }
+
+      #bot-chat {
+        background-color: blueviolet;
+        height: 80vh;
+        border: thin ridge rgb(2, 2, 45);
+        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .chat-title {
+        background-color: blue;
+      }
+
+      .chat {
+        background-color: cornflowerblue;
+      }
+
+      .chat-ballon {
+        min-height: 30px;
+        background-image: url("{% static 'images/mae-chat.png' %}");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+      }
+
+      .chat-baloon:nth-child(even) {
+        background-position: left;
+        padding-left: 30px;
+      }
+
+      .chat-baloon:nth-child(odd) {
+        background-position: right;
+        padding-right: 30px;
+      }
+
+      .chat-baloon p {
+        margin-left: 30px;
+        display: block;
+        min-height: 30px;
+        line-height: 30px;
+        background-color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 6px;
+      }
+
+      .chat-msg {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #8fbaff">
+      <a class="navbar-brand" href="#">Universo Atípico</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dia a Dia</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Artigos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">O que é TEA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Quem somos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-5 col-sm-12" style="text-align: center;">
+         
+          <p>&nbsp;</p>
+          
+          <img 
+            src="{% static 'images/AssAmALti.png' %}"
+            alt="Generic placeholder image"
+            title="Criança Autista"
+          />
+        </div>
+        <div class="col-md-7 col-sm-12 pr-5 pl-5 text-justify">
+         
+          
+          <p>&nbsp;</p>
+          <h3 class="mt-0">ESCALAS DE AVALIAÇÃO</h3>
+          
+          <p> &nbsp;</p>
+          <p>Autor da Pesquisa e Tradução: Vinicius Aguiar Agosto – 2009</p>
+<p>
+Quando se avalia pessoas suspeitas de Transtorno do Espectro do Autismo (TEA), é importante ter uma abordagem ampla e multiprofissional. O TEA afeta diversas áreas, o que exige a colaboração de especialistas de diferentes campos da saúde e educação. Para garantir uma avaliação rigorosa e sistemática, é recomendado o uso de instrumentos padronizados que ajudem a identificar o comprometimento e o nível funcional do indivíduo, auxiliando na formulação de um plano de tratamento personalizado.</p>
+<p>
+A escolha dos instrumentos a serem utilizados fica a cargo do profissional, levando em consideração as necessidades de cada caso. Alguns instrumentos são específicos para determinadas profissões, como psicólogos e fonoaudiólogos, enquanto outros exigem treinamento prévio, mesmo que não haja uma formação específica. Antes de usar qualquer instrumento, é recomendado consultar os manuais de aplicação e correção, além de contar com a supervisão de profissionais experientes na área.</p>
+<p>
+A seguir, apresentaremos algumas descrições de escalas de avaliação relacionadas aos Transtornos do Espectro do Autismo (TEAs):</p>
+<p>
+ADI-R
+</p>
+<p>
+A ADI-R (Autism Diagnostic Interview-Revised) é uma entrevista diagnóstica semiestruturada que é aplicada ao principal cuidador de uma criança com suspeita de Transtorno do Espectro do Autismo (TEA). Ela tem como objetivo fornecer uma avaliação ao longo da vida de uma série de comportamentos relevantes para o diagnóstico diferencial de TEA em indivíduos a partir dos 5 anos de idade até a idade adulta, considerando uma idade mental mínima de 2 anos.
+</p>
+
+<p>
+Essa entrevista passou por uma revisão em 1994, sendo reorganizada, abreviada e modificada para se adequar à avaliação de crianças com idade mental a partir de 18 meses e aumentar sua equivalência com os critérios do CID-10 e do DSM-IV.</p>
+
+<p>
+A ADI-R é dividida em cinco seções: perguntas introdutórias; questões sobre comunicação (passada e atual); sobre desenvolvimento social e brincadeiras (passado e atual); investigação de comportamentos repetitivos e restritos (avaliando tanto comportamentos atuais quanto os que sempre ocorreram); e algumas questões sobre problemas de comportamento em geral. Após a revisão, tornou-se possível aplicar a entrevista em cerca de 1 hora e meia em cuidadores de crianças de 3 a 4 anos que já têm alguma prática com o instrumento. Em crianças mais velhas, a entrevista pode levar um pouco mais de tempo.</p>
+<p>
+A entrevista é focada em três áreas principais:
+</p>
+<p>
+Qualidade da interação social recíproca, incluindo comportamentos como saudações, compartilhamento de emoções, oferecer e buscar conforto, e desenvolvimento de amizades intensas.</p>
+<p>
+Comunicação e linguagem, abrangendo características como uso social da linguagem, qualidade da interação durante a conversa, linguagem idiossincrática e fala estereotipada
+</p>
+
+        </div>
+      </div>
+    </div>      
+         
+    <footer class="card mt-5 text-center">
+      <div class="card-body">
+        <h5 class="card-title">Para mais informações sobre o projeto</h5>
+        <p class="card-text">
+          Agradecemos toda a forma de feedback da nossa plataforma, e
+          esperamos estar contribuindo com todos vocês.
+        </p>
+        <p class="card-text">
+          Caso queira conhecer o repositório do projeto, acesse:
+        </p>
+        <a
+          href="https://github.com/dognew/univesp-pi-2023-autismo"
+          class="btn btn-primary"
+          ><i class="fa-brands fa-github-square"></i> Projeto no GitHub</a
+        >
+      </div>
+      <div class="card-footer text-muted">
+        Equipe Projeto Integrador - Eixo Computação 2021 – Polo Caraguatatuba
+      </div>
+    </footer>
+    
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% bootstrap_javascript %}
+  </body>
+</html>

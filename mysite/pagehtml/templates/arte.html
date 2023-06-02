@@ -1,0 +1,190 @@
+{% load bootstrap4 %} {% load fontawesome_5 %} {% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="{% static 'images/favicon-univesp.png' %}"
+      type="image/png"
+    />
+    <title>{{ projectName }}</title>
+    {% bootstrap_css %}
+    <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <style>
+      body {
+        background-color: white;
+      }
+
+      #bot-chat {
+        background-color: blueviolet;
+        height: 80vh;
+        border: thin ridge rgb(2, 2, 45);
+        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .chat-title {
+        background-color: blue;
+      }
+
+      .chat {
+        background-color: cornflowerblue;
+      }
+
+      .chat-ballon {
+        min-height: 30px;
+        background-image: url("{% static 'images/mae-chat.png' %}");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+      }
+
+      .chat-baloon:nth-child(even) {
+        background-position: left;
+        padding-left: 30px;
+      }
+
+      .chat-baloon:nth-child(odd) {
+        background-position: right;
+        padding-right: 30px;
+      }
+
+      .chat-baloon p {
+        margin-left: 30px;
+        display: block;
+        min-height: 30px;
+        line-height: 30px;
+        background-color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 6px;
+      }
+
+      .chat-msg {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #8fbaff">
+      <a class="navbar-brand" href="#">Universo Atípico</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dia a Dia</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Artigos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">O que é TEA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Quem somos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-5 col-sm-12" style="text-align: center;">
+         
+          <p>&nbsp;</p>
+          
+          <img 
+            src="{% static 'images/law.png' %}"
+            alt="Generic placeholder image"
+            title="Criança Autista"
+          />
+        </div>
+        <div class="col-md-7 col-sm-12 pr-5 pl-5 text-justify">
+         
+          
+          <p>&nbsp;</p>
+          <h3 class="mt-0">Direito das Pessoas Autistas e dos Familiares </h3>
+          
+          <p> &nbsp;</p>
+          <p>O transtorno do espectro autista (TEA) é considerado uma deficiência do ponto de vista legal. Por essa razão, as leis que protegem os direitos das pessoas com deficiência também se aplicam às pessoas autistas. É fundamental que as famílias e cuidadores tenham acesso a essas informações.</p>
+
+<p>Com o propósito de orientar e fornecer suporte às famílias que convivem com crianças autistas e adultos diagnosticados com TEA, foi elaborado um Guia abrangente sobre os direitos das pessoas autistas e suas famílias. Esse material tem como objetivo informar sobre os direitos e fornecer orientações sobre como garantir sua aplicação. O Guia também oferece informações úteis relacionadas à saúde, educação, benefícios e sugestões de profissionais especializados.</p>
+<p>
+No Guia, são abordados os seguintes tópicos:
+</p>
+<ul>
+  <li>Lei Berenice Piana (nº 12.764)</li>
+  <li>Lei Brasileira de Inclusão (13.146/15)</li>
+  <li>Lei Romeo Mion (13.977/20)</li>
+  <li>Direitos gerais de pessoas autistas</li>
+  <li>Direitos de pessoas autistas e suas famílias na saúde</li>
+  <li>Direitos de pessoas autistas e suas famílias na educação</li>
+  <li>Direitos das famílias de pessoas autistas</li>
+  <li>BPC/LOAS</li>
+</ul>
+
+        </div>
+      </div>
+    </div>      
+         
+    <footer class="card mt-5 text-center">
+      <div class="card-body">
+        <h5 class="card-title">Para mais informações sobre o projeto</h5>
+        <p class="card-text">
+          Agradecemos toda a forma de feedback da nossa plataforma, e
+          esperamos estar contribuindo com todos vocês.
+        </p>
+        <p class="card-text">
+          Caso queira conhecer o repositório do projeto, acesse:
+        </p>
+        <a
+          href="https://github.com/dognew/univesp-pi-2023-autismo"
+          class="btn btn-primary"
+          ><i class="fa-brands fa-github-square"></i> Projeto no GitHub</a
+        >
+      </div>
+      <div class="card-footer text-muted">
+        Equipe Projeto Integrador - Eixo Computação 2021 – Polo Caraguatatuba
+      </div>
+    </footer>
+    
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% bootstrap_javascript %}
+  </body>
+</html>

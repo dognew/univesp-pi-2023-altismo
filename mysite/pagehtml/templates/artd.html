@@ -1,0 +1,291 @@
+{% load bootstrap4 %} {% load fontawesome_5 %} {% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="{% static 'images/favicon-univesp.png' %}"
+      type="image/png"
+    />
+    <title>{{ projectName }}</title>
+    {% bootstrap_css %}
+    <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <style>
+    body {
+      background-color: white;
+    }
+
+    #bot-chat {
+      background-color: blueviolet;
+      height: 80vh;
+      border: thin ridge rgb(2, 2, 45);
+      box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .chat-title {
+      background-color: blue;
+    }
+
+    .chat {
+      background-color: cornflowerblue;
+    }
+
+    .chat-ballon {
+      min-height: 30px;
+      background-image: url("{% static 'images/mae-chat.png' %}");
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+    }
+
+    .chat-baloon:nth-child(even) {
+      background-position: left;
+      padding-left: 30px;
+    }
+
+    .chat-baloon:nth-child(odd) {
+      background-position: right;
+      padding-right: 30px;
+    }
+
+    .chat-baloon p {
+      margin-left: 30px;
+      display: block;
+      min-height: 30px;
+      line-height: 30px;
+      background-color: white;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-radius: 6px;
+    }
+
+    .chat-msg {
+      background-color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #8fbaff">
+    <a class="navbar-brand" href="#">Universo Atípico</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dia a Dia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Artigos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">O que é TEA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Quem somos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <img src="{% static 'images/Sintomas1-5.png' %}" alt="Generic placeholder image" title="Criança Autista" />
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-4 col-sm-12" style="text-align: center;">
+        <p>&nbsp;</p>
+      </div>
+      <div class="col-md-8 col-sm-12 pr-5 pl-5 text-justify">
+        <p>Muitas crianças com Transtorno do Espectro Autista (TEA) apresentam sintomas quando ainda são muito pequenas,
+          especialmente dificuldades nas interações sociais e na linguagem. Saiba mais sobre os sintomas do autismo na
+          infância.
+        </p>
+
+        <p>Muitos bebês com autismo podem apresentar marcos do desenvolvimento na idade esperada, como sentar,
+          engatinhar e andar. No entanto, os pais podem perceber diferenças no desenvolvimento de gestos corporais, nas
+          brincadeiras de faz de conta e na comunicação.
+        </p>
+
+        <p>
+          Além de atrasos na linguagem e diferenças comportamentais, a dificuldade na interação social também é um dos
+          primeiros sintomas do autismo na infância. Ainda que os sinais possam ser sutis, eles podem estar presentes
+          antes mesmo do primeiro ano de vida.
+        </p>
+        <p>
+          Transtorno do Espectro Autista — TEA
+          O autismo se expressa através de um espectro de sintomas que surgem na primeira infância, causando atrasos em
+          áreas básicas do desenvolvimento, como aprender a falar, brincar e interagir com outras pessoas.
+        </p>
+        <p>
+          Os sinais e sintomas do autismo variam, assim como seus efeitos. Algumas crianças têm apenas deficiências
+          leves, enquanto outras têm mais dificuldades. No entanto, toda cri
+          ança no espectro do autismo têm problemas, pelo menos em algum grau, nas três áreas a seguir:</p>
+
+        <ul>
+          <li>Comunicação verbal e não verbal.</li>
+          <li>Relacionamento e interação social.</li>
+          <li>Comportamentos restritos e repetitivos.</li>
+        </ul>
+        <p>
+          Existem opiniões diferentes entre médicos e especialistas sobre a causa do autismo e a melhor forma de
+          tratá-lo. Entretanto, há um fato com o qual todos concordam: a importância da intervenção precoce. Por isso, é
+          fundamental estar atento aos primeiros sinais de autismo na infância.
+        </p>
+        <h4>
+          Sinais do autismo
+        </h4>
+        <p>
+          Alguns sinais de autismo relacionados à interação social, comunicação e comportamento podem surgir nos
+          primeiros anos de vida. Ainda que existam sintomas comuns, é importante lembrar que cada criança é única.
+          Dessa forma, os sintomas e sua gravidade variam muito.
+        </p>
+        <h4>
+          Sintomas relacionados à interação social:
+        </h4>
+        <ul>
+          <li>Ausência de contato visual.</li>
+          <li>Não reage ao sorriso dos pais ou a outras expressões faciais.</li>
+          <li>Não olha para objetos quando os pais apontam.</li>
+          <li>Não aponta para objetos.</li>
+          <li>Não traz objetos de interesse pessoal para mostrar aos pais.</li>
+          <li>Dificuldade de perceber o que os outros estão pensando ou sentindo através das expressões faciais.</li>
+          <li>Não demonstra preocupação (empatia) pelos outros.</li>
+          <li>Incapacidade ou desinteresse em fazer amigos.</li>
+        </ul>
+        <h4>Sintomas relacionados à comunicação:</h4>
+        <ul>
+          <li>Não aponta para objetos quando quer algo ou para compartilhar com outras pessoas.</li>
+          <li>Não fala palavras soltas aos 16 meses.</li>
+          <li>Repete o que os outros falam sem entender o significado (ecolalia).</li>
+          <li>Não responde quando o chamam pelo nome, mas pode reagir a outros sons (como a buzina de um carro).</li>
+          <li>Refere-se a si mesmo como “você” ou “ele”.</li>
+          <li>Muitas vezes, parece não querer se comunicar.</li>
+          <li>Não inicia ou dá continuidade a uma conversa.</li>
+          <li>Não usa brinquedos ou outros objetos para representar pessoas ou a realidade em brincadeiras que usam a
+            imaginação.</li>
+          <li>Pode ter uma boa memória, especialmente para números, letras, músicas ou um assunto específico.</li>
+          <li>Pode perder a linguagem ou outros marcos sociais, geralmente entre os 15 e 24 meses (regressão).</li>
+        </ul>
+
+        <h4>Sintomas relacionados ao comportamento (comportamentos repetitivos e restritos):</h4>
+
+        <ul>
+          <li>Balança ou gira o corpo, anda na ponta dos pés por muito tempo ou agita as mãos.</li>
+          <li>Gosta de rotinas, ordem e rituais; tem dificuldade com a mudança ou transição de atividades.</li>
+          <li>Grande interesse por determinados assuntos.</li>
+          <li>Brinca com parte dos brinquedos (por exemplo, gira as rodas de um carrinho).</li>
+          <li>Não parece sentir dor.</li>
+          <li>Pode ser muito sensível a cheiros, sons, luzes, texturas e toque.</li>
+        </ul>
+
+       <p>
+        É muito importante que os pais estejam atentos a esses sinais e, em caso de suspeita de autismo, busquem a
+        avaliação de um médico especialista. Quanto antes for realizado o diagnóstico, melhores serão os resultados dos
+        tratamentos e intervenções.
+      </p>   
+
+        <h4>Sintomas do autismo na infância</h4>
+        <p>
+        Aqui estão alguns exemplos que podem ajudar os pais a perceber alterações importantes no comportamento dos seus
+        filhos e os primeiros sinais de TEA.
+      </p>
+      <p>
+        <i class="fa-brands fa-circle">Aos 12 meses</i></p>
+        <p>
+        Nessa idade, uma criança com autismo pode não responder ao ouvir seu nome, mesmo que ele seja repetido várias
+        vezes, mas pode responder a outros sons.
+       </p>
+       <p>
+       <i class="fa-brands fa-circle">Aos 18 meses</i></p>
+        <p>
+        Uma criança com autismo pode não fazer nenhuma tentativa de compensar o atraso na fala, como usar expressões
+        faciais, ou pode apresentar ecolalia que dura mais que o esperado, repetindo frases e palavras que ouve, seja
+        das pessoas ou na TV.
+      </p>
+      <p>
+      <i class="fa-brands fa-circle">Aos 24 meses </i></p>
+      <p>
+        Uma criança com autismo não costuma levar objetos aos pais na tentativa de interagir com eles e, quando o faz,
+        não mantém contato visual.
+       </p>
+       <p>
+        Os sinais de autismo na infância são geralmente evidentes até os 5 anos. Dessa forma, pais e cuidadores devem
+        conhecer quais são os marcos de desenvolvimento e os sintomas mais comuns do TEA para identificá-los
+        precocemente.</p>
+
+        <p>Um profissional especializado irá realizar uma avaliação cuidadosa para fazer o diagnóstico do autismo ou
+        destacar essa possibilidade. Caso a criança seja diagnosticada com TEA, um tratamento multidisciplinar será
+        necessário, considerando as demandas de cada criança.</p>
+
+        <p>Uma equipe multidisciplinar é composta por pediatra, psicólogo, fonoaudiólogo, terapeuta ocupacional,
+        psicopedagogo, entre outros. O ideal é que o tratamento se inicie logo após o diagnóstico de autismo se
+        confirmar.</p>
+
+        <h5>Referências:</h5>
+          <p>
+        SILVA, Micheline and MULICK, James A.. Diagnosticando o transtorno autista: aspectos fundamentais e
+        considerações práticas. Psicol. cienc. prof. [online]. 2009, vol.29, n.1 [cited 2021-01-11], pp.116-131.
+      </p>
+<p>
+        ZANON, Regina Basso Zanon. Bárbara Backes. Cleonice Alves Bosa. Identificação dos Primeiros Sintomas do Autismo
+        pelos Pais.
+      </p>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="card mt-5 text-center">
+    <div class="card-body">
+      <h5 class="card-title">Para mais informações sobre o projeto</h5>
+      <p class="card-text">
+        Agradecemos toda a forma de feedback da nossa plataforma, e
+        esperamos estar contribuindo com todos vocês.
+      </p>
+      <p class="card-text">
+        Caso queira conhecer o repositório do projeto, acesse:
+      </p>
+      <a
+        href="https://github.com/dognew/univesp-pi-2023-autismo"
+        class="btn btn-primary"
+        ><i class="fa-brands fa-github-square"></i> Projeto no GitHub</a
+      >
+    </div>
+    <div class="card-footer text-muted">
+      Equipe Projeto Integrador - Eixo Computação 2021 – Polo Caraguatatuba
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  {% bootstrap_javascript %}
+</body>
+
+</html>
